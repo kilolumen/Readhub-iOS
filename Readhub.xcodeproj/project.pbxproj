@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		965D3DB5202C272500003FDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DB4202C272500003FDE /* AppDelegate.m */; };
-		965D3DB8202C272500003FDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DB7202C272500003FDE /* ViewController.m */; };
-		965D3DBB202C272500003FDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965D3DB9202C272500003FDE /* Main.storyboard */; };
 		965D3DBD202C272500003FDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965D3DBC202C272500003FDE /* Assets.xcassets */; };
-		965D3DC0202C272500003FDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 965D3DBE202C272500003FDE /* LaunchScreen.storyboard */; };
 		965D3DC3202C272500003FDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DC2202C272500003FDE /* main.m */; };
+		967BDF632058F37500D89110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF622058F37500D89110 /* AppDelegate.m */; };
+		967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF672058F71100D89110 /* RHBaseViewController.m */; };
+		967BDF6B2058F72900D89110 /* RHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF6A2058F72900D89110 /* RHNavigationController.m */; };
+		967BDF6F2058F97900D89110 /* RHSafariManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF6E2058F97900D89110 /* RHSafariManager.m */; };
+		967BDF722058F99100D89110 /* RHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF712058F99100D89110 /* RHWebViewController.m */; };
 		9CF308042057F250005712BA /* RHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF308032057F250005712BA /* RHTabBarController.m */; };
 		D8D15B32615C2952DD7E1515 /* Pods_Readhub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */; };
 /* End PBXBuildFile section */
@@ -22,14 +23,18 @@
 		50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Readhub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB0202C272500003FDE /* Readhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB3202C272500003FDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		965D3DB4202C272500003FDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		965D3DB6202C272500003FDE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		965D3DB7202C272500003FDE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		965D3DBA202C272500003FDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		965D3DBC202C272500003FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		965D3DBF202C272500003FDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		965D3DC1202C272500003FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965D3DC2202C272500003FDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		967BDF622058F37500D89110 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		967BDF662058F71100D89110 /* RHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBaseViewController.h; sourceTree = "<group>"; };
+		967BDF672058F71100D89110 /* RHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBaseViewController.m; sourceTree = "<group>"; };
+		967BDF692058F72900D89110 /* RHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNavigationController.h; sourceTree = "<group>"; };
+		967BDF6A2058F72900D89110 /* RHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNavigationController.m; sourceTree = "<group>"; };
+		967BDF6D2058F97900D89110 /* RHSafariManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHSafariManager.h; sourceTree = "<group>"; };
+		967BDF6E2058F97900D89110 /* RHSafariManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHSafariManager.m; sourceTree = "<group>"; };
+		967BDF702058F99100D89110 /* RHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHWebViewController.h; sourceTree = "<group>"; };
+		967BDF712058F99100D89110 /* RHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHWebViewController.m; sourceTree = "<group>"; };
 		9BBBE41D588305B0B25E6A6D /* Pods-Readhub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readhub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Readhub/Pods-Readhub.release.xcconfig"; sourceTree = "<group>"; };
 		9CF308022057F250005712BA /* RHTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTabBarController.h; sourceTree = "<group>"; };
 		9CF308032057F250005712BA /* RHTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTabBarController.m; sourceTree = "<group>"; };
@@ -78,18 +83,118 @@
 			isa = PBXGroup;
 			children = (
 				965D3DB3202C272500003FDE /* AppDelegate.h */,
-				965D3DB4202C272500003FDE /* AppDelegate.m */,
-				965D3DB6202C272500003FDE /* ViewController.h */,
-				965D3DB7202C272500003FDE /* ViewController.m */,
-				9CF308022057F250005712BA /* RHTabBarController.h */,
-				9CF308032057F250005712BA /* RHTabBarController.m */,
-				965D3DB9202C272500003FDE /* Main.storyboard */,
-				965D3DBC202C272500003FDE /* Assets.xcassets */,
-				965D3DBE202C272500003FDE /* LaunchScreen.storyboard */,
-				965D3DC1202C272500003FDE /* Info.plist */,
-				965D3DC2202C272500003FDE /* main.m */,
+				967BDF622058F37500D89110 /* AppDelegate.m */,
+				967BDF572058CFF700D89110 /* Modules */,
+				967BDF582058D03700D89110 /* Categories */,
+				967BDF642058F47200D89110 /* Networking */,
+				967BDF5A2058D0D500D89110 /* Resources */,
 			);
 			path = Readhub;
+			sourceTree = "<group>";
+		};
+		967BDF572058CFF700D89110 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				967BDF5B2058F14200D89110 /* Base */,
+				967BDF5D2058F1FF00D89110 /* Topic */,
+				967BDF5E2058F27000D89110 /* News */,
+				967BDF5F2058F29800D89110 /* Technews */,
+				967BDF602058F2AF00D89110 /* Blockchain */,
+				967BDF5C2058F1F100D89110 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		967BDF582058D03700D89110 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		967BDF5A2058D0D500D89110 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				965D3DC1202C272500003FDE /* Info.plist */,
+				965D3DC2202C272500003FDE /* main.m */,
+				965D3DBC202C272500003FDE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		967BDF5B2058F14200D89110 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				967BDF6C2058F90900D89110 /* Utils */,
+				967BDF652058F67D00D89110 /* Controllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		967BDF5C2058F1F100D89110 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		967BDF5D2058F1FF00D89110 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		967BDF5E2058F27000D89110 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		967BDF5F2058F29800D89110 /* Technews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Technews;
+			sourceTree = "<group>";
+		};
+		967BDF602058F2AF00D89110 /* Blockchain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Blockchain;
+			sourceTree = "<group>";
+		};
+		967BDF642058F47200D89110 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		967BDF652058F67D00D89110 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CF308022057F250005712BA /* RHTabBarController.h */,
+				9CF308032057F250005712BA /* RHTabBarController.m */,
+				967BDF662058F71100D89110 /* RHBaseViewController.h */,
+				967BDF672058F71100D89110 /* RHBaseViewController.m */,
+				967BDF692058F72900D89110 /* RHNavigationController.h */,
+				967BDF6A2058F72900D89110 /* RHNavigationController.m */,
+				967BDF702058F99100D89110 /* RHWebViewController.h */,
+				967BDF712058F99100D89110 /* RHWebViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		967BDF6C2058F90900D89110 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				967BDF6D2058F97900D89110 /* RHSafariManager.h */,
+				967BDF6E2058F97900D89110 /* RHSafariManager.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9FF637BE58E10C1F01266179 /* Frameworks */ = {
@@ -161,9 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965D3DC0202C272500003FDE /* LaunchScreen.storyboard in Resources */,
 				965D3DBD202C272500003FDE /* Assets.xcassets in Resources */,
-				965D3DBB202C272500003FDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,33 +331,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965D3DB8202C272500003FDE /* ViewController.m in Sources */,
 				9CF308042057F250005712BA /* RHTabBarController.m in Sources */,
+				967BDF6B2058F72900D89110 /* RHNavigationController.m in Sources */,
+				967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */,
 				965D3DC3202C272500003FDE /* main.m in Sources */,
-				965D3DB5202C272500003FDE /* AppDelegate.m in Sources */,
+				967BDF722058F99100D89110 /* RHWebViewController.m in Sources */,
+				967BDF632058F37500D89110 /* AppDelegate.m in Sources */,
+				967BDF6F2058F97900D89110 /* RHSafariManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		965D3DB9202C272500003FDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				965D3DBA202C272500003FDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		965D3DBE202C272500003FDE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				965D3DBF202C272500003FDE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		965D3DC4202C272500003FDE /* Debug */ = {
@@ -366,6 +453,7 @@
 			baseConfigurationReference = 0505BEB40AC2293F66A13912 /* Pods-Readhub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Readhub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -381,6 +469,7 @@
 			baseConfigurationReference = 9BBBE41D588305B0B25E6A6D /* Pods-Readhub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Readhub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
