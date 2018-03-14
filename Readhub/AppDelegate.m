@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "RHTabBarController.h"
+#import "RHNavigationController.h"
+#import "RHTopicViewController.h"
+#import "RHNewsViewController.h"
+#import "RHTechnewsViewController.h"
+#import "RHBlockchainViewController.h"
+#import "UIImage+Additions.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) RHTabBarController *rootViewController;
 
 @end
 
@@ -16,36 +25,93 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self setupAppAppearence];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = self.rootViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (RHTabBarController *)rootViewController {
+    if (!_rootViewController) {
+        _rootViewController = [[RHTabBarController alloc] init];
+        
+        RHTopicViewController *topicViewController = [[RHTopicViewController alloc] init];
+        RHNavigationController *topicNavigationController = [[RHNavigationController alloc] initWithRootViewController:topicViewController];
+        
+        RHNewsViewController *newsViewController = [[RHNewsViewController alloc] init];
+        RHNavigationController *newsNavigationController = [[RHNavigationController alloc] initWithRootViewController:newsViewController];
+
+        RHTechnewsViewController *technewsViewController = [[RHTechnewsViewController alloc] init];
+        RHNavigationController *technewsNavigationController = [[RHNavigationController alloc] initWithRootViewController:technewsViewController];
+
+        RHBlockchainViewController *blockchainViewController = [[RHBlockchainViewController alloc] init];
+        RHNavigationController *blockchainNavigationController = [[RHNavigationController alloc] initWithRootViewController:blockchainViewController];
+
+        _rootViewController.viewControllers = @[topicNavigationController, newsNavigationController, technewsNavigationController, blockchainNavigationController];
+    }
+
+    return _rootViewController;
+}
+
+- (void)setupAppAppearence {
+    //去掉黑条
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]]
+//                                      forBarPosition:UIBarPositionAny
+//                                          barMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setShadowImage:[UIImage imageWithColor:[UIColor whiteColor]]];
+    
+    // 设置导航条title的字体 //HEXCOLOR(0x40320D)
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSFontAttributeName : [UIFont boldSystemFontOfSize:16],
+                                                           NSForegroundColorAttributeName : [UIColor colorWithRed:64 / 255.0 green:50 / 255.0 blue:13 / 255.0 alpha:1.0]
+                                                           }];
+    // 设置导航条背景颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    // 设置导航条返回按钮颜色
+    [[UINavigationBar appearance]
+     setTintColor:[UIColor colorWithRed:64 / 255.0 green:50 / 255.0 blue:13 / 255.0 alpha:1.0]];
+    // 设置导航条为不透明，提高性能，减少naviBar的层次，UIViewController的extendedLayoutIncludesOpaqueBars属性与此有关
+    [[UINavigationBar appearance] setTranslucent:NO];
+    // 设置返回按钮图片
+    UIImage *backIndicator =
+    [[UIImage imageNamed:@"backIndicator"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [UINavigationBar appearance].backIndicatorImage = backIndicator;
+    [UINavigationBar appearance].backIndicatorTransitionMaskImage = backIndicator;
+    
+    // 将返回按钮的文字position设置不在屏幕上显示
+    [[UIBarButtonItem appearance]
+     setBackButtonTitlePositionAdjustment:UIOffsetMake(-[UIScreen mainScreen].bounds.size.width * 2, 0)
+     forBarMetrics:UIBarMetricsDefault];
+    
+    // 设置TabBarItem文字，偏移量
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -2)];
+}
 
 @end
