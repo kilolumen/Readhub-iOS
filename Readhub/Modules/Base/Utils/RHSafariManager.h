@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RHSafariManager : NSObject
+@import SafariServices;
+
+@interface RHSafariManager : NSObject <SFSafariViewControllerDelegate>
+
+@property (nonatomic, strong) SFSafariViewController *safariViewController;
 
 @end

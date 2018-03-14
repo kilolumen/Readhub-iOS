@@ -1,43 +1,27 @@
 //
-//  RHBaseViewController.m
+//  RHBlockchainViewController.m
 //  Readhub
 //
 //  Created by lidongjie on 2018/3/14.
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
-#import "RHBaseViewController.h"
+#import "RHBlockchainViewController.h"
 
-@interface RHBaseViewController ()
+@interface RHBlockchainViewController ()
 
 @end
 
-@implementation RHBaseViewController
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self.tabBarItem setImage:self.image];
-        [self.tabBarItem setSelectedImage:self.selectedImage];
-        self.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
-    }
-    return self;
-}
-
-- (UIImage *)image {
-    return nil;
-}
-
-- (UIImage *)selectedImage {
-    return nil;
-}
+@implementation RHBlockchainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -1,43 +1,27 @@
 //
-//  RHBaseViewController.m
+//  RHTechnewsViewController.m
 //  Readhub
 //
 //  Created by lidongjie on 2018/3/14.
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
-#import "RHBaseViewController.h"
+#import "RHTechnewsViewController.h"
 
-@interface RHBaseViewController ()
+@interface RHTechnewsViewController ()
 
 @end
 
-@implementation RHBaseViewController
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self.tabBarItem setImage:self.image];
-        [self.tabBarItem setSelectedImage:self.selectedImage];
-        self.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
-    }
-    return self;
-}
-
-- (UIImage *)image {
-    return nil;
-}
-
-- (UIImage *)selectedImage {
-    return nil;
-}
+@implementation RHTechnewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

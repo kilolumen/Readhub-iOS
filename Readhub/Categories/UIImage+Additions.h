@@ -1,5 +1,5 @@
 //
-//  RHBaseViewController.h
+//  UIImage+Additions.h
 //  Readhub
 //
 //  Created by lidongjie on 2018/3/14.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RHBaseViewController : UIViewController
+@interface UIImage (Additions)
 
-- (UIImage *)image;
- 
-- (UIImage *)selectedImage;
++ (instancetype)imageWithColor:(UIColor *)color;
 
 @end

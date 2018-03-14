@@ -1,43 +1,47 @@
 //
-//  RHBaseViewController.m
+//  RHTopicViewController.m
 //  Readhub
 //
 //  Created by lidongjie on 2018/3/14.
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
-#import "RHBaseViewController.h"
+#import "RHTopicViewController.h"
 
-@interface RHBaseViewController ()
+@interface RHTopicViewController ()
 
 @end
 
-@implementation RHBaseViewController
+@implementation RHTopicViewController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self.tabBarItem setImage:self.image];
-        [self.tabBarItem setSelectedImage:self.selectedImage];
-        self.tabBarItem.imageInsets = UIEdgeInsetsMake(-5, 0, 0, 0);
     }
     return self;
 }
 
 - (UIImage *)image {
-    return nil;
+    return [UIImage imageNamed:@"icon_topic"];
 }
 
 - (UIImage *)selectedImage {
-    return nil;
+    return [UIImage imageNamed:@"icon_topic_selected"];
+}
+
+- (NSString *)title {
+    return @"热门话题";
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*
