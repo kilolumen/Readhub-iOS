@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		965D3DBD202C272500003FDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965D3DBC202C272500003FDE /* Assets.xcassets */; };
 		965D3DC3202C272500003FDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DC2202C272500003FDE /* main.m */; };
 		967BDF632058F37500D89110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF622058F37500D89110 /* AppDelegate.m */; };
 		967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF672058F71100D89110 /* RHBaseViewController.m */; };
@@ -21,6 +20,7 @@
 		967BDF8520590BE300D89110 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF8420590BE300D89110 /* UIImage+Additions.m */; };
 		967BDF8A20590EEE00D89110 /* RHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF8920590EEE00D89110 /* RHSettingsViewController.m */; };
 		9CF308042057F250005712BA /* RHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF308032057F250005712BA /* RHTabBarController.m */; };
+		9CF3080D205A2726005712BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3080C205A2726005712BA /* Assets.xcassets */; };
 		D8D15B32615C2952DD7E1515 /* Pods_Readhub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +29,6 @@
 		50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Readhub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB0202C272500003FDE /* Readhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB3202C272500003FDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		965D3DBC202C272500003FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		965D3DC1202C272500003FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965D3DC2202C272500003FDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		967BDF622058F37500D89110 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		9BBBE41D588305B0B25E6A6D /* Pods-Readhub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readhub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Readhub/Pods-Readhub.release.xcconfig"; sourceTree = "<group>"; };
 		9CF308022057F250005712BA /* RHTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTabBarController.h; sourceTree = "<group>"; };
 		9CF308032057F250005712BA /* RHTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTabBarController.m; sourceTree = "<group>"; };
+		9CF3080C205A2726005712BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 			children = (
 				965D3DC1202C272500003FDE /* Info.plist */,
 				965D3DC2202C272500003FDE /* main.m */,
-				965D3DBC202C272500003FDE /* Assets.xcassets */,
+				9CF3080C205A2726005712BA /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965D3DBD202C272500003FDE /* Assets.xcassets in Resources */,
+				9CF3080D205A2726005712BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

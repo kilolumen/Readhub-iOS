@@ -20,11 +20,11 @@
     }
     return self;
 }
-
+//
 - (UIImage *)image {
     return [UIImage imageNamed:@"icon_topic"];
 }
-
+//选中状态
 - (UIImage *)selectedImage {
     return [UIImage imageNamed:@"icon_topic_selected"];
 }

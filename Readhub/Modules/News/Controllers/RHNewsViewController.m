@@ -14,6 +14,26 @@
 
 @implementation RHNewsViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+//未选中状态
+- (UIImage *)image {
+    return [UIImage imageNamed:@"icon_news"];
+}
+//选中状态
+- (UIImage *)selectedImage {
+    return [UIImage imageNamed:@"icon_news_selected"];
+}
+
+- (NSString *)title {
+    return @"科技动态";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
