@@ -7,6 +7,8 @@
 //
 
 #import "RHTopicViewController.h"
+#import "RHURLSessionManager.h"
+#import "RHTopicModel.h"
 
 @interface RHTopicViewController ()
 
@@ -35,8 +37,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
 
-    // Do any additional setup after loading the view.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[RHURLSessionManager shareInstance] requestDataWithUrl:@"https://api.readhub.me/topic" completion:^(id result) {
+        
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            NSArray *data = result[@"data"];
+            if ([data isKindOfClass:[NSArray class]]) {
+                NSMutableArray *models = [NSMutableArray arrayWithCapacity:data.count];
+                [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [models addObject:[RHTopicModel modelWithJSON:obj]];
+                }];
+                NSLog(@"%@", models);
+            }
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
