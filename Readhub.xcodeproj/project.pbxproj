@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965905B2205BCC5A00F642E2 /* RHTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965905B1205BCC5A00F642E2 /* RHTopicModel.m */; };
+		965905B6205BD11A00F642E2 /* RHURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 965905B5205BD11A00F642E2 /* RHURLSessionManager.m */; };
+		965905BA205F598400F642E2 /* RHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965905B9205F598400F642E2 /* RHBaseModel.m */; };
+		9659062A2064B31200F642E2 /* RHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965906292064B31200F642E2 /* RHNewsModel.m */; };
 		965D3DC3202C272500003FDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DC2202C272500003FDE /* main.m */; };
 		967BDF632058F37500D89110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF622058F37500D89110 /* AppDelegate.m */; };
 		967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF672058F71100D89110 /* RHBaseViewController.m */; };
@@ -27,6 +31,14 @@
 /* Begin PBXFileReference section */
 		0505BEB40AC2293F66A13912 /* Pods-Readhub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readhub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Readhub/Pods-Readhub.debug.xcconfig"; sourceTree = "<group>"; };
 		50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Readhub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		965905B0205BCC5A00F642E2 /* RHTopicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTopicModel.h; sourceTree = "<group>"; };
+		965905B1205BCC5A00F642E2 /* RHTopicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTopicModel.m; sourceTree = "<group>"; };
+		965905B4205BD11A00F642E2 /* RHURLSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHURLSessionManager.h; sourceTree = "<group>"; };
+		965905B5205BD11A00F642E2 /* RHURLSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHURLSessionManager.m; sourceTree = "<group>"; };
+		965905B8205F598400F642E2 /* RHBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBaseModel.h; sourceTree = "<group>"; };
+		965905B9205F598400F642E2 /* RHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBaseModel.m; sourceTree = "<group>"; };
+		965906282064B31200F642E2 /* RHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsModel.h; sourceTree = "<group>"; };
+		965906292064B31200F642E2 /* RHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsModel.m; sourceTree = "<group>"; };
 		965D3DB0202C272500003FDE /* Readhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB3202C272500003FDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		965D3DC1202C272500003FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +91,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		965905B3205BCC6300F642E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				965905B0205BCC5A00F642E2 /* RHTopicModel.h */,
+				965905B1205BCC5A00F642E2 /* RHTopicModel.m */,
+				965906282064B31200F642E2 /* RHNewsModel.h */,
+				965906292064B31200F642E2 /* RHNewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		965905B7205F597200F642E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				965905B8205F598400F642E2 /* RHBaseModel.h */,
+				965905B9205F598400F642E2 /* RHBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		965905E620622E4100F642E2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				965905B4205BD11A00F642E2 /* RHURLSessionManager.h */,
+				965905B5205BD11A00F642E2 /* RHURLSessionManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		965D3DA7202C272500003FDE = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +145,7 @@
 				967BDF622058F37500D89110 /* AppDelegate.m */,
 				967BDF572058CFF700D89110 /* Modules */,
 				967BDF582058D03700D89110 /* Categories */,
-				967BDF642058F47200D89110 /* Networking */,
+				965905E620622E4100F642E2 /* Networking */,
 				967BDF5A2058D0D500D89110 /* Resources */,
 			);
 			path = Readhub;
@@ -145,6 +186,7 @@
 		967BDF5B2058F14200D89110 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				965905B7205F597200F642E2 /* Model */,
 				967BDF6C2058F90900D89110 /* Utils */,
 				967BDF652058F67D00D89110 /* Controllers */,
 				967BDF8720590ECD00D89110 /* Views */,
@@ -163,6 +205,7 @@
 		967BDF5D2058F1FF00D89110 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
+				965905B3205BCC6300F642E2 /* Model */,
 				967BDF732058FED500D89110 /* Controllers */,
 			);
 			path = Topic;
@@ -190,13 +233,6 @@
 				967BDF762058FEF200D89110 /* Controllers */,
 			);
 			path = Blockchain;
-			sourceTree = "<group>";
-		};
-		967BDF642058F47200D89110 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		967BDF652058F67D00D89110 /* Controllers */ = {
@@ -410,17 +446,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF308042057F250005712BA /* RHTabBarController.m in Sources */,
+				965905B6205BD11A00F642E2 /* RHURLSessionManager.m in Sources */,
 				967BDF8520590BE300D89110 /* UIImage+Additions.m in Sources */,
 				967BDF6B2058F72900D89110 /* RHNavigationController.m in Sources */,
 				967BDF7C2058FF3400D89110 /* RHNewsViewController.m in Sources */,
 				967BDF822058FF4B00D89110 /* RHBlockchainViewController.m in Sources */,
 				967BDF7F2058FF3F00D89110 /* RHTechnewsViewController.m in Sources */,
 				967BDF792058FF2700D89110 /* RHTopicViewController.m in Sources */,
+				965905B2205BCC5A00F642E2 /* RHTopicModel.m in Sources */,
 				967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */,
 				965D3DC3202C272500003FDE /* main.m in Sources */,
+				9659062A2064B31200F642E2 /* RHNewsModel.m in Sources */,
 				967BDF722058F99100D89110 /* RHWebViewController.m in Sources */,
 				967BDF8A20590EEE00D89110 /* RHSettingsViewController.m in Sources */,
 				967BDF632058F37500D89110 /* AppDelegate.m in Sources */,
+				965905BA205F598400F642E2 /* RHBaseModel.m in Sources */,
 				967BDF6F2058F97900D89110 /* RHSafariManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
