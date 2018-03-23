@@ -26,11 +26,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self setupAppAppearence];
+    [self setupAppAppearence];  //调用
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    // 建立底视图 
     self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
     
