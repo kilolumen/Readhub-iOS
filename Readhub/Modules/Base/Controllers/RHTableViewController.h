@@ -11,5 +11,8 @@
 @interface RHTableViewController : RHBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong, readonly) UITableView *tableView;
+@property (nonatomic, strong, readonly) UIRefreshControl *refreshControl;  // 刷新控件
+
+- (void)refresh:(id)sender;
 
 @end
