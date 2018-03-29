@@ -14,13 +14,6 @@
 
 @implementation RHNewsViewController
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
 //未选中状态
 - (UIImage *)image {
     return [UIImage imageNamed:@"icon_news"];

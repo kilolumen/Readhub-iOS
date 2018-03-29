@@ -11,10 +11,10 @@
 @interface RHTopicModel : RHBaseModel
 
 @property (copy, nonatomic) NSString *topicId;
-@property (copy, nonatomic) NSString *createdAt;
-@property (copy, nonatomic) NSString *updatedAt;
+@property (copy, nonatomic) NSDate *createdAt;
+@property (copy, nonatomic) NSDate *updatedAt;
+@property (copy, nonatomic) NSDate *publishDate;
 @property (copy, nonatomic) NSString *order;
-@property (copy, nonatomic) NSString *publishDate;
 @property (copy, nonatomic) NSString *summary;
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *timeline;

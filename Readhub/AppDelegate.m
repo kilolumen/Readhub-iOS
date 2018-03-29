@@ -93,12 +93,12 @@
                                                            NSForegroundColorAttributeName : [UIColor colorWithRed:64 / 255.0 green:50 / 255.0 blue:13 / 255.0 alpha:1.0]
                                                            }];
     // 设置导航条背景颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     // 设置导航条返回按钮颜色
     [[UINavigationBar appearance]
      setTintColor:[UIColor colorWithRed:64 / 255.0 green:50 / 255.0 blue:13 / 255.0 alpha:1.0]];
     // 设置导航条为不透明，提高性能，减少naviBar的层次，UIViewController的extendedLayoutIncludesOpaqueBars属性与此有关
-    [[UINavigationBar appearance] setTranslucent:NO];
+//    [[UINavigationBar appearance] setTranslucent:NO];
     // 设置返回按钮图片
     UIImage *backIndicator =
     [[UIImage imageNamed:@"backIndicator"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
