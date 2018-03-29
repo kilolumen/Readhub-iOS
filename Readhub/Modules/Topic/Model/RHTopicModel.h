@@ -33,5 +33,6 @@
 @property (copy, nonatomic) NSString *entityName;
 @property (copy, nonatomic) NSString *entityType;
 @property (copy, nonatomic) NSString *entityUniqueId;
+@property (assign, nonatomic) NSInteger relatedTopicCount;
 
 @end
