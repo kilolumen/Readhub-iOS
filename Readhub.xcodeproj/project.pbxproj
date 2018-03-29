@@ -11,6 +11,9 @@
 		965905B6205BD11A00F642E2 /* RHURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 965905B5205BD11A00F642E2 /* RHURLSessionManager.m */; };
 		965905BA205F598400F642E2 /* RHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965905B9205F598400F642E2 /* RHBaseModel.m */; };
 		9659062A2064B31200F642E2 /* RHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 965906292064B31200F642E2 /* RHNewsModel.m */; };
+		9659065B206CBC3000F642E2 /* RHTopicLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9659065A206CBC3000F642E2 /* RHTopicLayout.m */; };
+		9659065E206CCA3700F642E2 /* RHTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9659065D206CCA3700F642E2 /* RHTopicCell.m */; };
+		96590663206CF54600F642E2 /* RHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96590662206CF54600F642E2 /* RHTableViewController.m */; };
 		965D3DC3202C272500003FDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 965D3DC2202C272500003FDE /* main.m */; };
 		967BDF632058F37500D89110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF622058F37500D89110 /* AppDelegate.m */; };
 		967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF672058F71100D89110 /* RHBaseViewController.m */; };
@@ -39,6 +42,12 @@
 		965905B9205F598400F642E2 /* RHBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBaseModel.m; sourceTree = "<group>"; };
 		965906282064B31200F642E2 /* RHNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsModel.h; sourceTree = "<group>"; };
 		965906292064B31200F642E2 /* RHNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsModel.m; sourceTree = "<group>"; };
+		96590659206CBC3000F642E2 /* RHTopicLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTopicLayout.h; sourceTree = "<group>"; };
+		9659065A206CBC3000F642E2 /* RHTopicLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTopicLayout.m; sourceTree = "<group>"; };
+		9659065C206CCA3700F642E2 /* RHTopicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTopicCell.h; sourceTree = "<group>"; };
+		9659065D206CCA3700F642E2 /* RHTopicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTopicCell.m; sourceTree = "<group>"; };
+		96590661206CF54600F642E2 /* RHTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTableViewController.h; sourceTree = "<group>"; };
+		96590662206CF54600F642E2 /* RHTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTableViewController.m; sourceTree = "<group>"; };
 		965D3DB0202C272500003FDE /* Readhub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Readhub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965D3DB3202C272500003FDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		965D3DC1202C272500003FDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +127,24 @@
 				965905B5205BD11A00F642E2 /* RHURLSessionManager.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		96590654206CB6FA00F642E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9659065C206CCA3700F642E2 /* RHTopicCell.h */,
+				9659065D206CCA3700F642E2 /* RHTopicCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96590658206CBC1E00F642E2 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				96590659206CBC3000F642E2 /* RHTopicLayout.h */,
+				9659065A206CBC3000F642E2 /* RHTopicLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		965D3DA7202C272500003FDE = {
@@ -205,6 +232,8 @@
 		967BDF5D2058F1FF00D89110 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
+				96590658206CBC1E00F642E2 /* Layout */,
+				96590654206CB6FA00F642E2 /* Views */,
 				965905B3205BCC6300F642E2 /* Model */,
 				967BDF732058FED500D89110 /* Controllers */,
 			);
@@ -242,6 +271,8 @@
 				9CF308032057F250005712BA /* RHTabBarController.m */,
 				967BDF662058F71100D89110 /* RHBaseViewController.h */,
 				967BDF672058F71100D89110 /* RHBaseViewController.m */,
+				96590661206CF54600F642E2 /* RHTableViewController.h */,
+				96590662206CF54600F642E2 /* RHTableViewController.m */,
 				967BDF692058F72900D89110 /* RHNavigationController.h */,
 				967BDF6A2058F72900D89110 /* RHNavigationController.m */,
 				967BDF702058F99100D89110 /* RHWebViewController.h */,
@@ -446,7 +477,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF308042057F250005712BA /* RHTabBarController.m in Sources */,
+				9659065E206CCA3700F642E2 /* RHTopicCell.m in Sources */,
 				965905B6205BD11A00F642E2 /* RHURLSessionManager.m in Sources */,
+				9659065B206CBC3000F642E2 /* RHTopicLayout.m in Sources */,
 				967BDF8520590BE300D89110 /* UIImage+Additions.m in Sources */,
 				967BDF6B2058F72900D89110 /* RHNavigationController.m in Sources */,
 				967BDF7C2058FF3400D89110 /* RHNewsViewController.m in Sources */,
@@ -458,6 +491,7 @@
 				965D3DC3202C272500003FDE /* main.m in Sources */,
 				9659062A2064B31200F642E2 /* RHNewsModel.m in Sources */,
 				967BDF722058F99100D89110 /* RHWebViewController.m in Sources */,
+				96590663206CF54600F642E2 /* RHTableViewController.m in Sources */,
 				967BDF8A20590EEE00D89110 /* RHSettingsViewController.m in Sources */,
 				967BDF632058F37500D89110 /* AppDelegate.m in Sources */,
 				965905BA205F598400F642E2 /* RHBaseModel.m in Sources */,

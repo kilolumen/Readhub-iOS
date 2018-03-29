@@ -6,8 +6,8 @@
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
-#import "RHBaseViewController.h"
+#import "RHTableViewController.h"
 
-@interface RHTopicViewController : RHBaseViewController
+@interface RHTopicViewController : RHTableViewController
 
 @end

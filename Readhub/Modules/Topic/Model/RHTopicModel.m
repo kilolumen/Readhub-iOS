@@ -9,6 +9,18 @@
 #import "RHTopicModel.h"
 #import "RHNewsModel.h"
 
+static NSDate *RHNSDateFromString(NSString *string) {
+    static NSDateFormatter *formatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSDateFormatter alloc] init];
+        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+    });
+    return [formatter dateFromString:string];
+}
+
 @implementation RHTopicModel
 
 - (void)setValue:(id)value forKey:(NSString *)key {
@@ -30,7 +42,12 @@
             }];
             value = eventsArray;
         }
+    } else if ([key isEqualToString:@"createdAt"] ||
+               [key isEqualToString:@"updatedAt"] ||
+               [key isEqualToString:@"publishDate"]) {
+        value = RHNSDateFromString(value);
     }
+    
     [super setValue:value forKey:key];
 }
 
