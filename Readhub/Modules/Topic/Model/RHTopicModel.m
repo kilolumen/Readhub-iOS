@@ -9,6 +9,7 @@
 #import "RHTopicModel.h"
 #import "RHNewsModel.h"
 
+
 static NSDate *RHNSDateFromString(NSString *string) {
     static NSDateFormatter *formatter;
     static dispatch_once_t onceToken;
@@ -21,8 +22,10 @@ static NSDate *RHNSDateFromString(NSString *string) {
     return [formatter dateFromString:string];
 }
 
+//
 @implementation RHTopicModel
 
+// 一个个赋值给属性：先找key（name），找到后再赋值value（_name）
 - (void)setValue:(id)value forKey:(NSString *)key {
     if ([value isKindOfClass:[NSNull class]]) {
         value = nil;
@@ -51,6 +54,7 @@ static NSDate *RHNSDateFromString(NSString *string) {
     [super setValue:value forKey:key];
 }
 
+//这里如果检测到id时，会把id对应的值，赋值给topicId
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"id"]) {
         [self setValue:value forKey:@"topicId"];
@@ -63,7 +67,17 @@ static NSDate *RHNSDateFromString(NSString *string) {
 
 @end
 
-
+//
 @implementation RHEventModel
+
+ - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+     if ([key isEqualToString:@"id"]) {
+         [self setValue:value forKey:@"eventId"];
+     }else {
+         [super setValue:value forUndefinedKey:key];
+     }
+     
+ }
+
 
 @end
