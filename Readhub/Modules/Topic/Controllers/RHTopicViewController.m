@@ -39,19 +39,15 @@
     self.tableView.dataSource = self;
     [self.tableView registerClass:[RHTopicCell class] forCellReuseIdentifier:@"TopicCell"];
     
-    [self requestData];
-}
-
-//
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [self.refreshControl beginRefreshing];  // 不会调用refresh方法，需要手动调用一次
+    [self refresh:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)requestData {
+- (void)refresh:(id)sender {
     [[RHURLSessionManager shareInstance] requestDataWithUrl:@"https://api.readhub.me/topic" completion:^(id result) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             if ([result isKindOfClass:[NSDictionary class]]) {
@@ -65,6 +61,11 @@
                     }];
                     self.topics = topics;
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                            if (self.refreshControl.isRefreshing) {
+                                [self.refreshControl endRefreshing];
+                            }
+                        });
                         [self.tableView reloadData];
                     });
                 }
