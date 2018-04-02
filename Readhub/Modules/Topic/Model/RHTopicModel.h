@@ -10,7 +10,8 @@
 
 @interface RHTopicModel : RHBaseModel
 
-@property (copy, nonatomic) NSString *topicId;
+
+@property (copy, nonatomic) NSString *topicId;//这两个地方JSON里面是id，因为objective-c里面id是关键字，不能作为属性，这里我都写了topicId，eventId
 @property (copy, nonatomic) NSDate *createdAt;
 @property (copy, nonatomic) NSDate *updatedAt;
 @property (copy, nonatomic) NSDate *publishDate;
@@ -27,7 +28,7 @@
 
 @interface RHEventModel: RHBaseModel
 
-@property (copy, nonatomic) NSString *eventId;
+@property (copy, nonatomic) NSString *eventId; //
 @property (copy, nonatomic) NSString *entityId;
 @property (copy, nonatomic) NSString *eventType;
 @property (copy, nonatomic) NSString *entityName;
