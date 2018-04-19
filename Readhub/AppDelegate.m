@@ -62,15 +62,19 @@
     if (!_rootViewController) {
         _rootViewController = [[RHTabBarController alloc] init];
         
+        // 热门话题
         RHTopicViewController *topicViewController = [[RHTopicViewController alloc] init];
         RHNavigationController *topicNavigationController = [[RHNavigationController alloc] initWithRootViewController:topicViewController];
         
+        // 科技动态
         RHNewsViewController *newsViewController = [[RHNewsViewController alloc] init];
         RHNavigationController *newsNavigationController = [[RHNavigationController alloc] initWithRootViewController:newsViewController];
-
+        
+        // 开发者资讯
         RHTechnewsViewController *technewsViewController = [[RHTechnewsViewController alloc] init];
         RHNavigationController *technewsNavigationController = [[RHNavigationController alloc] initWithRootViewController:technewsViewController];
 
+        // 区块链快讯
         RHBlockchainViewController *blockchainViewController = [[RHBlockchainViewController alloc] init];
         RHNavigationController *blockchainNavigationController = [[RHNavigationController alloc] initWithRootViewController:blockchainViewController];
 

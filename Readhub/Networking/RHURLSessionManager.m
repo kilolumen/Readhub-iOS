@@ -20,6 +20,7 @@
     return instance;
 }
 
+// 发送get请求 URL加载
 - (void)requestDataWithUrl:(NSString *)url completion:(void (^)(id))completion {
 
     NSURLSession *session = [NSURLSession sharedSession];

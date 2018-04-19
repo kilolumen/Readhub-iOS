@@ -7,7 +7,10 @@
 //
 
 #import "RHTopicLayout.h"
+#import "NSDate+Additions.h"
 
+/*
+// 时间 写出“几天前”的样式:
 static NSString *RHStringWithDate(NSDate *date) {
     if (!date) return @"";
     
@@ -33,6 +36,7 @@ static NSString *RHStringWithDate(NSDate *date) {
         return [NSString stringWithFormat:@"%d天前", (int)(delta / 60.0 / 60.0 / 24.0)];
     }
 }
+*/
 
 @implementation RHTopicLayout
 
@@ -51,7 +55,9 @@ static NSString *RHStringWithDate(NSDate *date) {
     CGFloat titleHeight = [self.topic.title boundingRectWithSize:CGSizeMake(titleWidth, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15.0f]} context:nil].size.height;
     _titleFrame = CGRectMake(kTopicCellPadding, kTopicCellTopMargin, titleWidth, titleHeight);
     
-    _dateString = RHStringWithDate(self.topic.publishDate);
+    //_dateString = RHStringWithDate(self.topic.publishDate); // 这行用上面的NSDate全局变量
+    _dateString = [self.topic.publishDate convertToString];
+    
     CGSize dateSize = [_dateString boundingRectWithSize:CGSizeMake(200, 20) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:13.0f]} context:nil].size;
     _dateFrame = CGRectMake(kTopicCellPadding, CGRectGetMaxY(_titleFrame) + kTopicCellPaddingText, dateSize.width, dateSize.height);
     

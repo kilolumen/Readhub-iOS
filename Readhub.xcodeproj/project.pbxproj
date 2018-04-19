@@ -21,11 +21,21 @@
 		967BDF6F2058F97900D89110 /* RHSafariManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF6E2058F97900D89110 /* RHSafariManager.m */; };
 		967BDF722058F99100D89110 /* RHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF712058F99100D89110 /* RHWebViewController.m */; };
 		967BDF792058FF2700D89110 /* RHTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF782058FF2700D89110 /* RHTopicViewController.m */; };
-		967BDF7C2058FF3400D89110 /* RHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF7B2058FF3400D89110 /* RHNewsViewController.m */; };
-		967BDF7F2058FF3F00D89110 /* RHTechnewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF7E2058FF3F00D89110 /* RHTechnewsViewController.m */; };
-		967BDF822058FF4B00D89110 /* RHBlockchainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF812058FF4B00D89110 /* RHBlockchainViewController.m */; };
 		967BDF8520590BE300D89110 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF8420590BE300D89110 /* UIImage+Additions.m */; };
 		967BDF8A20590EEE00D89110 /* RHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967BDF8920590EEE00D89110 /* RHSettingsViewController.m */; };
+		9CA39994207E864300C3142E /* RHTechnewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA39993207E864300C3142E /* RHTechnewsModel.m */; };
+		9CA39997207E866A00C3142E /* RHBlockchainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA39996207E866A00C3142E /* RHBlockchainModel.m */; };
+		9CA3999A207E88E400C3142E /* RHNewssModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA39999207E88E400C3142E /* RHNewssModel.m */; };
+		9CA399D3208020F200C3142E /* RHNewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399D2208020F200C3142E /* RHNewsLayout.m */; };
+		9CA399D720806B3B00C3142E /* RHNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399D620806B3B00C3142E /* RHNewsCell.m */; };
+		9CA399DD2080770F00C3142E /* RHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399DC2080770F00C3142E /* RHNewsViewController.m */; };
+		9CA399E0208077A900C3142E /* RHTechnewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399DF208077A900C3142E /* RHTechnewsViewController.m */; };
+		9CA399E3208077D900C3142E /* RHBlockchainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399E2208077D900C3142E /* RHBlockchainViewController.m */; };
+		9CA399EC2083FEF400C3142E /* RHTechnewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399EB2083FEF400C3142E /* RHTechnewsLayout.m */; };
+		9CA399EF2083FF2E00C3142E /* RHBlockchainLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399EE2083FF2E00C3142E /* RHBlockchainLayout.m */; };
+		9CA399F22084021100C3142E /* RHTechnewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399F12084021100C3142E /* RHTechnewsCell.m */; };
+		9CA399F52084024B00C3142E /* RHBlockchainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA399F42084024B00C3142E /* RHBlockchainCell.m */; };
+		9CCBF178209AF8890011842F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCBF177209AF8890011842F /* NSDate+Additions.m */; };
 		9CF308042057F250005712BA /* RHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF308032057F250005712BA /* RHTabBarController.m */; };
 		9CF3080D205A2726005712BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3080C205A2726005712BA /* Assets.xcassets */; };
 		D8D15B32615C2952DD7E1515 /* Pods_Readhub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C0F0B6A3B42B4897744694 /* Pods_Readhub.framework */; };
@@ -63,17 +73,37 @@
 		967BDF712058F99100D89110 /* RHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHWebViewController.m; sourceTree = "<group>"; };
 		967BDF772058FF2700D89110 /* RHTopicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTopicViewController.h; sourceTree = "<group>"; };
 		967BDF782058FF2700D89110 /* RHTopicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTopicViewController.m; sourceTree = "<group>"; };
-		967BDF7A2058FF3400D89110 /* RHNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsViewController.h; sourceTree = "<group>"; };
-		967BDF7B2058FF3400D89110 /* RHNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsViewController.m; sourceTree = "<group>"; };
-		967BDF7D2058FF3F00D89110 /* RHTechnewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTechnewsViewController.h; sourceTree = "<group>"; };
-		967BDF7E2058FF3F00D89110 /* RHTechnewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTechnewsViewController.m; sourceTree = "<group>"; };
-		967BDF802058FF4B00D89110 /* RHBlockchainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBlockchainViewController.h; sourceTree = "<group>"; };
-		967BDF812058FF4B00D89110 /* RHBlockchainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBlockchainViewController.m; sourceTree = "<group>"; };
 		967BDF8320590BE300D89110 /* UIImage+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
 		967BDF8420590BE300D89110 /* UIImage+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
 		967BDF8820590EEE00D89110 /* RHSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHSettingsViewController.h; sourceTree = "<group>"; };
 		967BDF8920590EEE00D89110 /* RHSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHSettingsViewController.m; sourceTree = "<group>"; };
 		9BBBE41D588305B0B25E6A6D /* Pods-Readhub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Readhub.release.xcconfig"; path = "Pods/Target Support Files/Pods-Readhub/Pods-Readhub.release.xcconfig"; sourceTree = "<group>"; };
+		9CA39992207E864300C3142E /* RHTechnewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTechnewsModel.h; sourceTree = "<group>"; };
+		9CA39993207E864300C3142E /* RHTechnewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTechnewsModel.m; sourceTree = "<group>"; };
+		9CA39995207E866A00C3142E /* RHBlockchainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBlockchainModel.h; sourceTree = "<group>"; };
+		9CA39996207E866A00C3142E /* RHBlockchainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBlockchainModel.m; sourceTree = "<group>"; };
+		9CA39998207E88E400C3142E /* RHNewssModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewssModel.h; sourceTree = "<group>"; };
+		9CA39999207E88E400C3142E /* RHNewssModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewssModel.m; sourceTree = "<group>"; };
+		9CA399D1208020F200C3142E /* RHNewsLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsLayout.h; sourceTree = "<group>"; };
+		9CA399D2208020F200C3142E /* RHNewsLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsLayout.m; sourceTree = "<group>"; };
+		9CA399D520806B3B00C3142E /* RHNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsCell.h; sourceTree = "<group>"; };
+		9CA399D620806B3B00C3142E /* RHNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsCell.m; sourceTree = "<group>"; };
+		9CA399DB2080770F00C3142E /* RHNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHNewsViewController.h; sourceTree = "<group>"; };
+		9CA399DC2080770F00C3142E /* RHNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNewsViewController.m; sourceTree = "<group>"; };
+		9CA399DE208077A900C3142E /* RHTechnewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTechnewsViewController.h; sourceTree = "<group>"; };
+		9CA399DF208077A900C3142E /* RHTechnewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTechnewsViewController.m; sourceTree = "<group>"; };
+		9CA399E1208077D900C3142E /* RHBlockchainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBlockchainViewController.h; sourceTree = "<group>"; };
+		9CA399E2208077D900C3142E /* RHBlockchainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBlockchainViewController.m; sourceTree = "<group>"; };
+		9CA399EA2083FEF400C3142E /* RHTechnewsLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTechnewsLayout.h; sourceTree = "<group>"; };
+		9CA399EB2083FEF400C3142E /* RHTechnewsLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTechnewsLayout.m; sourceTree = "<group>"; };
+		9CA399ED2083FF2E00C3142E /* RHBlockchainLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBlockchainLayout.h; sourceTree = "<group>"; };
+		9CA399EE2083FF2E00C3142E /* RHBlockchainLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBlockchainLayout.m; sourceTree = "<group>"; };
+		9CA399F02084021100C3142E /* RHTechnewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTechnewsCell.h; sourceTree = "<group>"; };
+		9CA399F12084021100C3142E /* RHTechnewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTechnewsCell.m; sourceTree = "<group>"; };
+		9CA399F32084024B00C3142E /* RHBlockchainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHBlockchainCell.h; sourceTree = "<group>"; };
+		9CA399F42084024B00C3142E /* RHBlockchainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHBlockchainCell.m; sourceTree = "<group>"; };
+		9CCBF176209AF8890011842F /* NSDate+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		9CCBF177209AF8890011842F /* NSDate+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		9CF308022057F250005712BA /* RHTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHTabBarController.h; sourceTree = "<group>"; };
 		9CF308032057F250005712BA /* RHTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHTabBarController.m; sourceTree = "<group>"; };
 		9CF3080C205A2726005712BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +211,7 @@
 		967BDF572058CFF700D89110 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CCBF0472089FCA20011842F /* Tools */,
 				967BDF5B2058F14200D89110 /* Base */,
 				967BDF5D2058F1FF00D89110 /* Topic */,
 				967BDF5E2058F27000D89110 /* News */,
@@ -196,6 +227,8 @@
 			children = (
 				967BDF8320590BE300D89110 /* UIImage+Additions.h */,
 				967BDF8420590BE300D89110 /* UIImage+Additions.m */,
+				9CCBF176209AF8890011842F /* NSDate+Additions.h */,
+				9CCBF177209AF8890011842F /* NSDate+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -243,6 +276,9 @@
 		967BDF5E2058F27000D89110 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				9CA39985207E735500C3142E /* Layout */,
+				9CA39987207E74EF00C3142E /* Views */,
+				9CA39988207E750D00C3142E /* Model */,
 				967BDF742058FEDF00D89110 /* Controllers */,
 			);
 			path = News;
@@ -251,6 +287,9 @@
 		967BDF5F2058F29800D89110 /* Technews */ = {
 			isa = PBXGroup;
 			children = (
+				9CA3998B207E75C200C3142E /* Layout */,
+				9CA3998A207E75B900C3142E /* Views */,
+				9CA39989207E75B100C3142E /* Model */,
 				967BDF752058FEE700D89110 /* Controllers */,
 			);
 			path = Technews;
@@ -259,6 +298,9 @@
 		967BDF602058F2AF00D89110 /* Blockchain */ = {
 			isa = PBXGroup;
 			children = (
+				9CA3998E207E75F200C3142E /* Layout */,
+				9CA3998D207E75EA00C3142E /* Views */,
+				9CA3998C207E75E300C3142E /* Model */,
 				967BDF762058FEF200D89110 /* Controllers */,
 			);
 			path = Blockchain;
@@ -302,8 +344,8 @@
 		967BDF742058FEDF00D89110 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				967BDF7A2058FF3400D89110 /* RHNewsViewController.h */,
-				967BDF7B2058FF3400D89110 /* RHNewsViewController.m */,
+				9CA399DB2080770F00C3142E /* RHNewsViewController.h */,
+				9CA399DC2080770F00C3142E /* RHNewsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,8 +353,8 @@
 		967BDF752058FEE700D89110 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				967BDF7D2058FF3F00D89110 /* RHTechnewsViewController.h */,
-				967BDF7E2058FF3F00D89110 /* RHTechnewsViewController.m */,
+				9CA399DE208077A900C3142E /* RHTechnewsViewController.h */,
+				9CA399DF208077A900C3142E /* RHTechnewsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -320,8 +362,8 @@
 		967BDF762058FEF200D89110 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				967BDF802058FF4B00D89110 /* RHBlockchainViewController.h */,
-				967BDF812058FF4B00D89110 /* RHBlockchainViewController.m */,
+				9CA399E1208077D900C3142E /* RHBlockchainViewController.h */,
+				9CA399E2208077D900C3142E /* RHBlockchainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +382,94 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9CA39985207E735500C3142E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399D1208020F200C3142E /* RHNewsLayout.h */,
+				9CA399D2208020F200C3142E /* RHNewsLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		9CA39987207E74EF00C3142E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399D520806B3B00C3142E /* RHNewsCell.h */,
+				9CA399D620806B3B00C3142E /* RHNewsCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CA39988207E750D00C3142E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CA39998207E88E400C3142E /* RHNewssModel.h */,
+				9CA39999207E88E400C3142E /* RHNewssModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CA39989207E75B100C3142E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CA39992207E864300C3142E /* RHTechnewsModel.h */,
+				9CA39993207E864300C3142E /* RHTechnewsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CA3998A207E75B900C3142E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399F02084021100C3142E /* RHTechnewsCell.h */,
+				9CA399F12084021100C3142E /* RHTechnewsCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CA3998B207E75C200C3142E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399EA2083FEF400C3142E /* RHTechnewsLayout.h */,
+				9CA399EB2083FEF400C3142E /* RHTechnewsLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		9CA3998C207E75E300C3142E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CA39995207E866A00C3142E /* RHBlockchainModel.h */,
+				9CA39996207E866A00C3142E /* RHBlockchainModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CA3998D207E75EA00C3142E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399F32084024B00C3142E /* RHBlockchainCell.h */,
+				9CA399F42084024B00C3142E /* RHBlockchainCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CA3998E207E75F200C3142E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9CA399ED2083FF2E00C3142E /* RHBlockchainLayout.h */,
+				9CA399EE2083FF2E00C3142E /* RHBlockchainLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		9CCBF0472089FCA20011842F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		9FF637BE58E10C1F01266179 /* Frameworks */ = {
@@ -476,25 +606,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCBF178209AF8890011842F /* NSDate+Additions.m in Sources */,
 				9CF308042057F250005712BA /* RHTabBarController.m in Sources */,
 				9659065E206CCA3700F642E2 /* RHTopicCell.m in Sources */,
+				9CA399F22084021100C3142E /* RHTechnewsCell.m in Sources */,
 				965905B6205BD11A00F642E2 /* RHURLSessionManager.m in Sources */,
+				9CA399F52084024B00C3142E /* RHBlockchainCell.m in Sources */,
+				9CA39994207E864300C3142E /* RHTechnewsModel.m in Sources */,
 				9659065B206CBC3000F642E2 /* RHTopicLayout.m in Sources */,
 				967BDF8520590BE300D89110 /* UIImage+Additions.m in Sources */,
 				967BDF6B2058F72900D89110 /* RHNavigationController.m in Sources */,
-				967BDF7C2058FF3400D89110 /* RHNewsViewController.m in Sources */,
-				967BDF822058FF4B00D89110 /* RHBlockchainViewController.m in Sources */,
-				967BDF7F2058FF3F00D89110 /* RHTechnewsViewController.m in Sources */,
+				9CA399D720806B3B00C3142E /* RHNewsCell.m in Sources */,
+				9CA399E3208077D900C3142E /* RHBlockchainViewController.m in Sources */,
+				9CA399EF2083FF2E00C3142E /* RHBlockchainLayout.m in Sources */,
 				967BDF792058FF2700D89110 /* RHTopicViewController.m in Sources */,
 				965905B2205BCC5A00F642E2 /* RHTopicModel.m in Sources */,
+				9CA399DD2080770F00C3142E /* RHNewsViewController.m in Sources */,
 				967BDF682058F71100D89110 /* RHBaseViewController.m in Sources */,
+				9CA399E0208077A900C3142E /* RHTechnewsViewController.m in Sources */,
 				965D3DC3202C272500003FDE /* main.m in Sources */,
+				9CA39997207E866A00C3142E /* RHBlockchainModel.m in Sources */,
 				9659062A2064B31200F642E2 /* RHNewsModel.m in Sources */,
 				967BDF722058F99100D89110 /* RHWebViewController.m in Sources */,
 				96590663206CF54600F642E2 /* RHTableViewController.m in Sources */,
 				967BDF8A20590EEE00D89110 /* RHSettingsViewController.m in Sources */,
+				9CA3999A207E88E400C3142E /* RHNewssModel.m in Sources */,
 				967BDF632058F37500D89110 /* AppDelegate.m in Sources */,
 				965905BA205F598400F642E2 /* RHBaseModel.m in Sources */,
+				9CA399D3208020F200C3142E /* RHNewsLayout.m in Sources */,
+				9CA399EC2083FEF400C3142E /* RHTechnewsLayout.m in Sources */,
 				967BDF6F2058F97900D89110 /* RHSafariManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

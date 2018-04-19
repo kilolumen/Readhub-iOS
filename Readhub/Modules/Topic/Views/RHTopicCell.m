@@ -8,6 +8,7 @@
 
 #import "RHTopicCell.h"
 
+// 通过扩展声明，提供属性 [ 私有属性 ]
 @interface RHTopicCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
