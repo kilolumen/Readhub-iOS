@@ -11,7 +11,7 @@
 
 static CGFloat const kTopicCellTopMargin = 11;
 static CGFloat const kTopicCellBottomMargin = 9;
-static CGFloat const kTopicCellPadding = 15;
+static CGFloat const kTopicCellPadding = 15;          // cell两边的边距
 static CGFloat const kTopicCellPaddingText = 7;
 
 #define kScreenBounds [UIScreen mainScreen].bounds

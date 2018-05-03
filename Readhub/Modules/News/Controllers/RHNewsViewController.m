@@ -2,13 +2,18 @@
 //  RHNewsViewController.m
 //  Readhub
 //
-//  Created by lidongjie on 2018/3/14.
+//  Created by Geraint on 2018/4/13.
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
 #import "RHNewsViewController.h"
+#import "RHURLSessionManager.h" //get请求
+#import "RHNewssModel.h"
+#import "RHNewsCell.h"
 
 @interface RHNewsViewController ()
+
+@property (nonatomic, strong) NSArray *newss;
 
 @end
 
@@ -30,57 +35,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self requestData];      //在viewDidLoad里面设置的NSURLSession调用
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[RHNewsCell class] forCellReuseIdentifier:@"NewsCell"];
     
+    // 不会调用refresh方法，需要手动调用一次（刷新）
+    [self.refreshControl beginRefreshing];
+    
+    [self refresh:nil]; // 调用json解析
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
-//发送get请求：
-- (void)requestData {
-    //1.创建NSURLSession对象（可以获取单例对象）
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    //2.根据NSURLSession对象创建一个Task
-    
-    NSURL *url = [NSURL URLWithString:@"https://api.readhub.me/news"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    //方法参数说明
-    /*
-     注意：该block是在子线程中调用的，如果拿到数据之后要做一些UI刷新操作，那么需要回到主线程刷新
-     第一个参数：需要发送的请求对象
-     block:当请求结束拿到服务器响应的数据时调用block
-     block-NSData:该请求的响应体
-     block-NSURLResponse:存放本次请求的响应信息，响应头，真实类型为NSHTTPURLResponse
-     block-NSErroe:请求错误信息
-     */
-    NSURLSessionDataTask * dataTask =  [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable data, NSURLResponse * __nullable response, NSError * __nullable error) {
-        
-        //拿到响应头信息
-        NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
-        
-        //4.解析拿到的响应数据
-        NSLog(@"%@\n%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding],res.allHeaderFields);
+// json解析
+- (void)refresh:(id)sender {
+    // 调用 【 发送get请求方法 】
+    [[RHURLSessionManager shareInstance] requestDataWithUrl:@"https://api.readhub.me/news" completion:^(id result) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            if ([result isKindOfClass:[NSDictionary class]]) {
+                NSArray *data = result[@"data"];
+                if ([data isKindOfClass:[NSArray class]]) {
+                    NSMutableArray *newss = [NSMutableArray arrayWithCapacity:data.count];
+                    [data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        RHNewssModel *news = [RHNewssModel modelWithJSON:obj];
+                        RHNewsLayout *layout = [[RHNewsLayout alloc] initWithNews:news];
+                        [newss addObject:layout];
+                    }];
+                    // 上面定义的
+                    self.newss = newss;
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                            if (self.refreshControl.isRefreshing) {
+                                [self.refreshControl endRefreshing];
+                            }
+                        });
+                        [self.tableView reloadData];
+                    });
+                }
+            }
+        });
     }];
-    
-    //3.执行Task
-    //注意：刚创建出来的task默认是挂起状态的，需要调用该方法来启动任务（执行任务）
-    [dataTask resume];
-    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.newss.count; // 最上面定义的数组newss
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RHNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell" forIndexPath:indexPath];
+    [cell setLayout:self.newss[indexPath.row]];
+    return cell;
+}
+
+// ???
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    RHNewsLayout *layout = self.newss[indexPath.row];
+    return layout.height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

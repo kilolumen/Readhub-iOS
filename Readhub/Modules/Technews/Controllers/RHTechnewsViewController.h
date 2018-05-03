@@ -2,12 +2,12 @@
 //  RHTechnewsViewController.h
 //  Readhub
 //
-//  Created by lidongjie on 2018/3/14.
+//  Created by Geraint on 2018/4/13.
 //  Copyright © 2018年 kilolumen. All rights reserved.
 //
 
-#import "RHBaseViewController.h"
+#import "RHTableViewController.h"
 
-@interface RHTechnewsViewController : RHBaseViewController
+@interface RHTechnewsViewController : RHTableViewController
 
 @end

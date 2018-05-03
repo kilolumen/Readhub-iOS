@@ -8,6 +8,9 @@
 
 #import "RHBaseModel.h"
 
+// 因为这里有newsModel了，所以其他三个页面不用写他们的newsModel了（直接调用就可以）
+// ***  RHNewsModel就是RHTopicModel里的数组newsArray
+// newsArray里面有几条新闻，可以转换成几条RHNewsModel
 @interface RHNewsModel : RHBaseModel
 
 @property (copy, nonatomic) NSString *newsId;
@@ -19,7 +22,7 @@
 @property (copy, nonatomic) NSString *siteName;
 @property (copy, nonatomic) NSString *siteSlug;
 @property (copy, nonatomic) NSString *authorName;
-@property (copy, nonatomic) NSString *publishDate;
+@property (copy, nonatomic) NSDate *publishDate;
 @property (copy, nonatomic) NSString *language;
 @property (assign, nonatomic) NSInteger groupId;
 @property (assign, nonatomic) NSInteger duplicateId;

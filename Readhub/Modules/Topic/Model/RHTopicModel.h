@@ -26,6 +26,7 @@
 
 @end
 
+// 上边RHTopicModel中的eventData就是下边的RHEventModel
 @interface RHEventModel: RHBaseModel
 
 @property (copy, nonatomic) NSString *eventId; //
